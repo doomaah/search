@@ -1,0 +1,151 @@
+/* Base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffreebackground%2Fblue-backdrop-with-3d-search-bar-ui-symbol_4839037.html&psig=AOvVaw0RVEvC3SfbPmOCTpUBBEEI&ust=1727162310290000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPCn35_D2IgDFQAAAAAdAAAAABAE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+}
+
+/* Full-screen container */
+.container {
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    padding: 0; /* No padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Transparent background */
+    box-shadow: none; /* Remove box shadow */
+    border-radius: 0; /* No border radius */
+    transition: background-color 0.3s; /* Smooth transition for dark mode */
+}
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+input {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    margin-right: 0.625rem;
+    border: 1px solid #ddd;
+    border-radius: 0.3125rem;
+    width: 300px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+}
+
+/* Button styling */
+button {
+    padding: 1rem 1.5rem; /* Larger button size */
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: none; /* Remove button shadow */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Clear History Button Styling */
+.clear-history-btn {
+    margin-top: 1rem;
+    background-color: #FF4136; /* Red for clear button */
+}
+
+.clear-history-btn:hover {
+    background-color: #e33a2c;
+}
+
+/* List styling */
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    width: 300px; /* Make the history list have the same width as input */
+}
+
+#history-list li {
+    background-color: #f9f9f9;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    margin-bottom: 0.75rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for dark mode */
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: linear-gradient(to bottom, #222, #555); /* Dark mode gradient */
+        color: #f0f0f0; /* Light text for dark background */
+    }
+
+    .container {
+        background-color: transparent; /* Transparent container in dark mode */
+    }
+
+    input {
+        background-color: #555; /* Dark input field */
+        color: #fff;
+        border-color: #777;
+    }
+
+    button {
+        background-color: #1a73e8; /* Lighter blue for dark mode */
+    }
+
+    button:hover {
+        background-color: #135ab5;
+    }
+
+    #history-list li {
+        background-color: #444; /* Dark background for list items */
+        border-color: #666;
+    }
+
+    .clear-history-btn {
+        background-color: #FF4136;
+    }
+
+    .clear-history-btn:hover {
+        background-color: #e33a2c;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    input {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    } 
+
+    #history-list {
+        width: 90%; /* Make list fill most of the width on mobile */
+    }
+}
